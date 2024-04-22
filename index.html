@@ -11,22 +11,58 @@
     <style>
         /* Custom Styles */
         
-        #home {
-            background-image: url('hero-background.jpg');
-            background-size: cover;
-            background-position: center;
+        body {
+            background-color: #f8f9fa;
+            /* White */
+            color: #495057;
+            /* Dark gray for text */
+        }
+        
+        header {
+            background-color: #007bff;
+            /* Blue */
             color: #fff;
-            /* Text color for better readability */
+            /* White for text */
+        }
+        
+        header a.navbar-brand,
+        header .navbar-nav .nav-link {
+            color: #fff;
+            /* White for nav links */
+        }
+        
+        #home {
+            background-image: url('./Designer.jpeg');
+            background-position: center;
+            background-position-y: 700px;
+            background-size: cover;
+            /* Green */
+            color: #fff;
+            /* White for text */
             padding: 100px 0;
             /* Adjust as needed */
+        }
+        
+        .btn-primary {
+            background-color: #fd7e14;
+            /* Orange */
+            border-color: #fd7e14;
+            /* Orange */
+        }
+        
+        footer {
+            background-color: #007bff;
+            /* Blue */
+            color: #fff;
+            /* White for text */
         }
     </style>
 </head>
 
 <body>
     <!-- Header Section -->
-    <header class="bg-dark text-white">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary container">
             <a class="navbar-brand" href="#">TNR - Tech Naija Rise</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,7 +79,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-light">
+    <section id="home">
         <div class="container py-5">
             <div class="text-center">
                 <h2>Revolutionizing Naija Tech, One Step at a Time</h2>
@@ -98,7 +134,7 @@
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact" class="bg-light">
+    <section id="contact">
         <div class="container py-5">
             <div class="text-center">
                 <h2>Contact Us</h2>
@@ -108,7 +144,7 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-dark text-white">
+    <footer>
         <div class="container py-4 text-center">
             <p>&copy; 2024 TNR - Tech Naija Rise. All rights reserved.</p>
         </div>
