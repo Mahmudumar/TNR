@@ -10,6 +10,7 @@
     <!-- Custom CSS -->
     <style>
         /* Custom Styles */
+        /* Custom Styles */
         
         body {
             background-color: #f8f9fa;
@@ -32,6 +33,8 @@
         }
         
         #home {
+            position: relative;
+            /* Positioning context for the overlay */
             background-image: url('./Designer.jpeg');
             background-position: center;
             background-position-y: 700px;
@@ -41,6 +44,25 @@
             /* White for text */
             padding: 100px 0;
             /* Adjust as needed */
+        }
+        
+        #home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Dark overlay with 50% opacity */
+            z-index: 1;
+            /* Ensure overlay is on top of the background image */
+        }
+        
+        #home .container {
+            position: relative;
+            z-index: 2;
+            /* Ensure text and buttons are above the overlay */
         }
         
         .btn-primary {
@@ -82,8 +104,8 @@
     <section id="home">
         <div class="container py-5">
             <div class="text-center">
-                <h2>Revolutionizing Naija Tech, One Step at a Time</h2>
-                <p class="lead">Empowering individuals through tech education with our one-thing-at-a-time approach.</p>
+                <h2>Revolutionizing Nigeria's Tech Industry with Exceptional Education and Impactful Solutions</h2>
+                <p class="lead">Empowering Nigeria's tech revolution through comprehensive programming education and innovative software solutions</p>
                 <a href="#courses" class="btn btn-primary">Explore Our Courses</a>
             </div>
         </div>
@@ -112,7 +134,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Python Course</h5>
                                 <p class="card-text">Our Python course is the starting point for beginners who want to learn programming. Master the fundamentals of Python programming language and start building your own applications.</p>
-                                <a href="https://paystack.com/pay/python-per-session" class="btn btn-primary">Enroll Now</a>
+                                <a href="./plans.html" class="btn btn-primary">Enroll Now</a>
                             </div>
                         </div>
                     </div>
@@ -121,17 +143,18 @@
         </div>
     </section>
 
-
     <!-- Why Choose TNR Section -->
     <section id="why-choose" class="bg-white">
         <div class="container py-5">
             <div class="text-center">
-                <h2>Why Choose TNR</h2>
-                <p class="lead">Because it is 100% reliable and empowers programmers by removing the stress that comes from programming the wrong way.</p>
+                <h2>Why Choose TNR?</h2>
+                <p class="lead">At TNR, we provide a unique approach to programming education that focuses on clarity, reliability, and eliminating stress. Our one-thing-at-a-time method ensures that you master each concept thoroughly, building a solid foundation for
+                    your tech career. Join us to experience a supportive learning environment that empowers you to excel and innovate.</p>
                 <!-- Add more reasons to choose TNR here -->
             </div>
         </div>
     </section>
+
 
     <!-- Contact Us Section -->
     <section id="contact">
